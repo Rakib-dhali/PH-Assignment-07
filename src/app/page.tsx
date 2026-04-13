@@ -1,14 +1,16 @@
 import { PlusIcon } from "lucide-react";
 import { SummeryCard, Friends } from "@/types";
+import Image from "next/image";
+import Link from "next/link";
 
 async function getFriends() {
-  const res = await fetch("/friends.json", {
+  const res = await fetch("http://localhost:3000/friends.json", {
     cache: "no-store",
   });
   return res.json();
 }
 
-export default function Home() {
+export default async function Home() {
   const summeryCards: SummeryCard[] = [
     { counter: 10, label: "Total Friends" },
     { counter: 3, label: "On Track" },
@@ -16,7 +18,7 @@ export default function Home() {
     { counter: 12, label: "Interactions This Month" },
   ];
 
-  const friends: Promise<Friends[]> = getFriends();
+  const friends: Friends[] = await getFriends();
   console.log(friends);
 
   return (
@@ -34,7 +36,7 @@ export default function Home() {
         </button>
       </section>
       <section>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 p-5">
           {summeryCards.map(({ counter, label }) => (
             <div
               key={label}
@@ -45,10 +47,47 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="cards">
-          {/* Render friend cards here */}
-          <h2>Your Friends</h2>
-          <div>{/* Example friend card */}</div>
+        <hr className="border-[#E9E9E9] my-10 p-5"  />
+        <div className="cards p-5">
+          <h2 className="font-semibold text-2xl text-[#1F2937] my-5">Your Friends</h2>
+          <div className="grid grid-cols-1 sm:grid-col-span-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+            {friends.map((friend) => {
+              const { id, name, picture, days_since_contact, status, tags } =
+                friend;
+              return (
+                <Link
+                  href={`${id}`}
+                  key={id}
+                  className="flex flex-col items-center gap-3 p-6 rounded-lg bg-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.08)]"
+                >
+                  <Image
+                    src={picture}
+                    alt={name}
+                    width={80}
+                    height={80}
+                    className="friend-picture rounded-full"
+                  />
+                  <h3 className="font-semibold text-[#1F2937]">{name}</h3>
+                  <p>{days_since_contact}d ago</p>
+                  <div className=" flex gap-2">
+                    {tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="bg-[#CBFADB] text-[#244D3F] text-xs font-medium px-2 py-1 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p
+                    className={` ${status === "overdue" ? "bg-[#EF4444]" : status === "almost-due" ? "bg-[#EFAD44]" : "bg-[#244D3F]"} text-white font-medium py-1 px-3 rounded-full text-sm`}
+                  >
+                    {status}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
     </main>

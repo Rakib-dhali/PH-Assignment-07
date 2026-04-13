@@ -17,7 +17,7 @@ export type Friends = {
   picture: string;
   email: string;
   days_since_contact: number;
-  status: "on-track" | "overdue";
+  status: "on-track" | "overdue" | "almost-due";
   tags: string[];
   bio: string;
   goal: number;

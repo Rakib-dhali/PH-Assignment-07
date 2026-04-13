@@ -25,10 +25,11 @@ export default function Navbar() {
     }`;
 
   return (
-    <nav className="bg-white w-full relative border-b border-[#E9E9E9] ">
+    <nav className="bg-white w-full border-b border-[#E9E9E9] fixed top-0 left-0 right-0 z-50 ">
       <div className="max-w-7xl flex items-center justify-between mx-auto px-4 py-3">
-        <Link href="/" className="text-xl">
+        <Link href="/" >
           <Image
+          className="h-auto"
             src="/assets/logo.png"
             alt="Keen Keeper"
             width={141}
