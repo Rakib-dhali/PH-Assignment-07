@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Aryan Hossain",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "aryan.hossain@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university during freshman year. We used to pull all-nighters before exams. Now he works as a software engineer in Dhaka.",
+    "goal": 14,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 2,
+    "name": "Nadia Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "nadia.rahman@outlook.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "My first team lead at the internship. She taught me how to write clean code and gave honest feedback. We still catch up regularly.",
+    "goal": 7,
+    "next_due_date": "2025-07-14"
+  },
+  {
+    "id": 3,
+    "name": "James Okafor",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "james.okafor@protonmail.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["online", "developer"],
+    "bio": "Connected on Twitter/X over a shared love of open source. Never met in person but feel like we've known each other for years.",
+    "goal": 30,
+    "next_due_date": "2025-06-28"
+  },
+  {
+    "id": 4,
+    "name": "Priya Sharma",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "priya.sharma@yahoo.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["childhood", "close friend"],
+    "bio": "Grew up on the same street. We have been friends since we were 8. She just got married and moved to Bangalore.",
+    "goal": 10,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 5,
+    "name": "Lucas Mendes",
+    "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+    "email": "lucas.mendes@gmail.com",
+    "days_since_contact": 60,
+    "status": "overdue",
+    "tags": ["college", "gaming"],
+    "bio": "Roommate for two years in university. We spent way too many nights gaming instead of studying. He is now doing his masters in Brazil.",
+    "goal": 21,
+    "next_due_date": "2025-06-15"
+  },
+  {
+    "id": 6,
+    "name": "Sara Al-Amin",
+    "picture": "https://randomuser.me/api/portraits/women/22.jpg",
+    "email": "sara.alamin@gmail.com",
+    "days_since_contact": 9,
+    "status": "on-track",
+    "tags": ["work", "design"],
+    "bio": "Worked together on a freelance project. She is a brilliant UI designer and always pushes back on my half-baked ideas in the best way.",
+    "goal": 14,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 7,
+    "name": "Tanvir Islam",
+    "picture": "https://randomuser.me/api/portraits/men/14.jpg",
+    "email": "tanvir.islam@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["close friend", "neighborhood"],
+    "bio": "We met at a local programming meetup and instantly clicked. He is one of the few people I can talk to about both code and life.",
+    "goal": 7,
+    "next_due_date": "2025-07-17"
+  },
+  {
+    "id": 8,
+    "name": "Emily Nguyen",
+    "picture": "https://randomuser.me/api/portraits/women/57.jpg",
+    "email": "emily.nguyen@icloud.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["online", "mentor"],
+    "bio": "A senior developer who reviewed one of my open source PRs and left incredibly thoughtful feedback. She has been a quiet mentor ever since.",
+    "goal": 21,
+    "next_due_date": "2025-07-01"
+  }
+]
