@@ -24,3 +24,8 @@ export type Friends = {
   next_due_date: string;
 };
 
+export type RecentInteraction = {
+  type: "Text" | "Meetup" | "Video" | "Call";
+  note: string;
+  date: string;
+};

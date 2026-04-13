@@ -1,14 +1,8 @@
 import { PlusIcon } from "lucide-react";
-import { SummeryCard, Friends } from "@/types";
+import { SummeryCard, Friends } from "@/lib/types";
 import Image from "next/image";
 import Link from "next/link";
-
-async function getFriends() {
-  const res = await fetch("http://localhost:3000/friends.json", {
-    cache: "no-store",
-  });
-  return res.json();
-}
+import { getFriends } from "@/lib/friends";
 
 export default async function Home() {
   const summeryCards: SummeryCard[] = [
@@ -19,11 +13,10 @@ export default async function Home() {
   ];
 
   const friends: Friends[] = await getFriends();
-  console.log(friends);
 
   return (
-    <main className="w-full max-w-277.5 mx-auto my-20 bg-[#F8FAFC]">
-      <section className="text-center flex-col flex gap-4 items-center">
+    <main className="w-full max-w-277.5 mx-auto my-5 md:my-20 bg-[#F8FAFC]">
+      <section className="text-center p-5 flex-col flex gap-4 items-center">
         <h1 className="text-4xl font-bold text-[#1F2937]">
           Friends to keep close in your life
         </h1>
@@ -47,16 +40,18 @@ export default async function Home() {
             </div>
           ))}
         </div>
-        <hr className="border-[#E9E9E9] my-10 p-5"  />
+        <hr className="border-[#E9E9E9] my-5 md:my-10 p-5" />
         <div className="cards p-5">
-          <h2 className="font-semibold text-2xl text-[#1F2937] my-5">Your Friends</h2>
+          <h2 className="font-semibold text-2xl text-[#1F2937] my-5">
+            Your Friends
+          </h2>
           <div className="grid grid-cols-1 sm:grid-col-span-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
             {friends.map((friend) => {
               const { id, name, picture, days_since_contact, status, tags } =
                 friend;
               return (
                 <Link
-                  href={`${id}`}
+                  href={`${id.toString()}`}
                   key={id}
                   className="flex flex-col items-center gap-3 p-6 rounded-lg bg-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.08)]"
                 >

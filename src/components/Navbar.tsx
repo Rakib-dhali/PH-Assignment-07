@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Home, Clock, LineChart, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { NavItem } from "@/types";
+import { NavItem } from "@/lib/types";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
