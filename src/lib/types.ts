@@ -29,3 +29,9 @@ export type RecentInteraction = {
   note: string;
   date: string;
 };
+
+export interface PieChartData {
+  type: string;
+  value: number;
+  fill: string;
+}

@@ -12,8 +12,8 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function TimelinePage() {
   const { timeline } = useTimeline();
-  const [typeFilter, setTypeFilter] = useState("All");
-  const [search, setSearch] = useState("");
+  const [typeFilter, setTypeFilter] = useState<string>("All");
+  const [search, setSearch] = useState<string>("");
 
   const filtered = timeline.filter((entry) => {
     const matchesType = typeFilter === "All" || entry.type === typeFilter;
@@ -24,10 +24,8 @@ export default function TimelinePage() {
   return (
     <main className="min-h-screen bg-[#F0F4F3] p-6">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-5xl font-bold text-[#1F2937] mb-6">Timeline</h1>
-
-        {/* Filters */}
-        <div className="flex gap-3 mb-6">
+        <h1 className="text-3xl md:text-5xl font-bold text-[#1F2937] mb-6">Timeline</h1>
+        <div className="flex flex-col md:flex-row gap-3 mb-6">
           <input
             type="text"
             placeholder="Search by friend name..."
@@ -46,8 +44,6 @@ export default function TimelinePage() {
             <option value="Video">Video</option>
           </select>
         </div>
-
-        {/* List */}
         {filtered.length === 0 ? (
           <p className="text-gray-400 text-sm">No interactions found.</p>
         ) : (
