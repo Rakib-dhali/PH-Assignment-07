@@ -29,12 +29,10 @@ export default function Navbar() {
       <div className="max-w-7xl flex items-center justify-between mx-auto px-4 py-3">
         <Link href="/" >
           <Image
-            style={{width:"auto", height:"auto"
-            }}
             src="/assets/logo.png"
             alt="Keen Keeper"
-            width={141}
-            height={40}
+            width={180}
+            height={60}
           />
         </Link>
         <ul className="hidden md:flex items-center gap-1">

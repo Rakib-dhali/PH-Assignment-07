@@ -11,6 +11,7 @@ import {
   History,
 } from "lucide-react";
 import { Metadata } from "next";
+import CheckInButtons from "@/components/Buttons";
 
 export const metadata: Metadata = {
   title: "Friend Details - KeenKeeper",
@@ -131,21 +132,7 @@ export default async function FriendDetails({
             <h2 className="font-semibold text-[#1F2937] mb-4">
               Quick Check-In
             </h2>
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                { icon: Phone, label: "Call" },
-                { icon: MessageSquare, label: "Text" },
-                { icon: Video, label: "Video" },
-              ].map(({ icon: Icon, label }) => (
-                <button
-                  key={label}
-                  className="flex flex-col items-center gap-2 py-4 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors text-sm text-[#1F2937]"
-                >
-                  <Icon size={22} />
-                  {label}
-                </button>
-              ))}
-            </div>
+            <CheckInButtons friendName={name} />
           </div>
           <div className="bg-white rounded-xl p-5 shadow-sm">
             <div className="flex items-center justify-between mb-4">

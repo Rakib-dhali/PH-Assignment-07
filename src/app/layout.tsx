@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { TimelineProvider } from "@/context/TimeLineContext";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${inter.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${inter.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col pt-16 ">
         <Navbar />
-
-        {children}
+        <TimelineProvider> {children}
+          <ToastContainer position="top-center" /> 
+        </TimelineProvider>
       </body>
     </html>
   );
