@@ -57,19 +57,19 @@ It provides a clean, intuitive dashboard to monitor relationship health, track l
 ## 📸 Screenshots
 
 ### 1. Dashboard Overview
-![Dashboard Overview](/screenshots/1.png)  
+![Dashboard Overview](public/screenshots/1.png)  
 *Beautiful card-based interface showing all connections with relationship health status.*
 
 ### 2. Adding a New Friend
-![Add New Friend](/screenshots/2.png)  
+![Add New Friend](public/screenshots/2.png)  
 *Simple and clean form to add new connections.*
 
 ### 3. Recent Interactions
-![Recent Interactions](/screenshots/3.png)  
+![Recent Interactions](public/screenshots/3.png)  
 *Showing recent interactions and activity.*
 
 ### 4. Stats & Insights
-![Stats & Insights](/screenshots/4.png)  
+![Stats & Insights](public/screenshots/4.png)  
 *Pie chart visualization using Recharts for relationship insights.*
 
 
