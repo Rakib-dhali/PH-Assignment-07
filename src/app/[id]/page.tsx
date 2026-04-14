@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Metadata } from "next";
 import CheckInButtons from "@/components/Buttons";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Friend Details - KeenKeeper",
@@ -27,6 +28,9 @@ export default async function FriendDetails({
   const friends = await getFriends();
   const friend: Friends = friends.find((f: Friends) => f.id.toString() === id);
 
+  if(!friend) {
+    notFound();
+  }
   const {
     name,
     picture,

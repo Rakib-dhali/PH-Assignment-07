@@ -35,3 +35,8 @@ export interface PieChartData {
   value: number;
   fill: string;
 }
+
+export type SocialLink = {
+    icon: string;
+    href: string;
+} 

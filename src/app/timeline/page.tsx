@@ -1,5 +1,6 @@
 "use client";
 
+import NoInteractions from "@/components/NoInteraction";
 import { useTimeline } from "@/context/TimeLineContext";
 import { Phone, MessageSquare, Video } from "lucide-react";
 import { useState } from "react";
@@ -45,7 +46,7 @@ export default function TimelinePage() {
           </select>
         </div>
         {filtered.length === 0 ? (
-          <p className="text-gray-400 text-sm">No interactions found.</p>
+          <NoInteractions />
         ) : (
           <div className="flex flex-col gap-3">
             {filtered.map((entry, index) => (
