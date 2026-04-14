@@ -29,7 +29,8 @@ export default function Navbar() {
       <div className="max-w-7xl flex items-center justify-between mx-auto px-4 py-3">
         <Link href="/" >
           <Image
-          className="h-auto"
+            style={{width:"auto", height:"auto"
+            }}
             src="/assets/logo.png"
             alt="Keen Keeper"
             width={141}

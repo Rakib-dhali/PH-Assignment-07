@@ -3,3 +3,7 @@
 body {
   font-family: var(--font-geist-sans);
 }
+
+.inter {
+  font-family: var(--font-inter);
+}

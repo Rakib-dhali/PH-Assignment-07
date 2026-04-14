@@ -1,6 +1,8 @@
+import path from "path";
+import fs from "fs/promises";
+
 export async function getFriends() {
-  const res = await fetch("http://localhost:3000/friends.json", {
-    cache: "no-store",
-  });
-  return res.json();
+  const filePath = path.join(process.cwd(), "public", "friends.json");
+  const fileContent = await fs.readFile(filePath, "utf-8");
+  return JSON.parse(fileContent);
 }

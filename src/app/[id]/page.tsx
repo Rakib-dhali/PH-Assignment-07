@@ -10,13 +10,7 @@ import {
   Trash2,
   History,
 } from "lucide-react";
-import { Inter } from "next/font/google";
 import { Metadata } from "next";
-
-export const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Friend Details - KeenKeeper",
@@ -89,7 +83,7 @@ export default async function FriendDetails({
                 </span>
               ))}
             </div>
-            <p className={`${inter.className} text-sm text-gray-400 italic`}>&quot;{bio}&quot;</p>
+            <p className="text-sm inter text-gray-400 italic">&quot;{bio}&quot;</p>
             <p className="text-sm text-gray-400">Preferred: {email}</p>
           </div>
           <div className="text-center font-medium  flex flex-col gap-4">
