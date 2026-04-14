@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KeenKeeper
 
-## Getting Started
+![KeenKeeper](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-First, run the development server:
+**Your personal shelf of meaningful connections.**  
+Browse, tend, and nurture the relationships that matter most.
+
+---
+
+## ✨ About KeenKeeper
+
+KeenKeeper is a modern **personal relationship management** web application that helps you keep track of your friends, mentors, colleagues, and loved ones. Never let an important connection fade away again.
+
+It provides a clean, intuitive dashboard to monitor relationship health, track last interactions, and get gentle reminders to nurture the bonds that matter.
+
+**Live Demo:** [keenkeeper-rakib.vercel.app](https://keenkeeper-rakib.vercel.app/)
+
+---
+
+## 🛠 Technologies Used
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Font**: Geist 
+- **Deployment**: Vercel
+- **Other**: ESLint, PostCSS, Next.js Image Optimization
+
+---
+
+## 🚀 Key Features
+
+### 1. **Interactive Friend Dashboard**
+   - Beautiful card-based grid showing all your connections
+   - Details include name, relationship context, last interaction time, and status
+   - Color-coded status tags: **On-track** 🟢 | **Almost due** 🟡 | **Overdue** 🔴
+
+### 2. **Relationship Health Overview**
+   - Quick stats at a glance:
+     - Total friends
+     - Relationships on-track
+     - Relationships needing attention
+     - Interactions this month
+   - Helps you prioritize who to reach out to
+
+### 3. **Easy Management Tools**
+   - Add new friends with a simple form
+   - Navigation between **Home**, **Timeline**, and **Stats** pages
+   - Clean, responsive design that works beautifully on mobile and desktop
+
+---
+
+
+
+## 📸 Screenshots
+
+### 1. Dashboard Overview
+![Add Friend](screenshots/1.png)
+
+*Simple and clean form to add new connections.*
+
+### 2. Adding a New Friend
+![Friends](screenshots/2.png)
+
+
+*Beautiful card-based interface showing all your connections with relationship health status.*
+
+### 3. Recent Interaction
+![](screenshots/4.png)
+*Showing Recent interactivity*
+### 4. Stats & Insights
+![Relationship Stats](screenshots/4.png)
+*Used recharts.js to show pichart*
+
+---
+### 📄 License*
+This project is created as part of a Programming Hero assignment.
+
+Made with ❤️ by [Rakib](https://github.com/Rakib-dhali)
+---
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+- Node.js 18+
+- pnpm / npm / yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Rakib-dhali/PH-Assignment-07.git
+cd PH-Assignment-07
+
+# Install dependencies
+npm install
+# or
+pnpm install
+
 npm run dev
 # or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
