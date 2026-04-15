@@ -2,13 +2,9 @@ import { Friends, RecentInteraction } from "@/lib/types";
 import Image from "next/image";
 import { getFriends } from "@/lib/friends";
 import {
-  Phone,
-  MessageSquare,
-  Video,
   BellOff,
   Archive,
   Trash2,
-  History,
 } from "lucide-react";
 import { Metadata } from "next";
 import CheckInButtons from "@/components/Buttons";
@@ -137,43 +133,6 @@ export default async function FriendDetails({
               Quick Check-In
             </h2>
             <CheckInButtons friendName={name} />
-          </div>
-          <div className="bg-white rounded-xl p-5 shadow-sm">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="font-semibold text-[#1F2937]">
-                Recent Interactions
-              </h2>
-              <button className="flex items-center gap-1 text-sm border border-gray-200 px-3 py-1.5 rounded-md hover:bg-gray-50 transition-colors">
-                <History size={14} /> Full History
-              </button>
-            </div>
-            <div className="divide-y divide-gray-100">
-              {recentInteractions.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between py-3"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-gray-100 rounded-lg">
-                      {item.type === "Call" || item.type === "Meetup" ? (
-                        <Phone size={16} />
-                      ) : item.type === "Video" ? (
-                        <Video size={16} />
-                      ) : (
-                        <MessageSquare size={16} />
-                      )}
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-[#1F2937]">
-                        {item.type}
-                      </p>
-                      <p className="text-xs text-gray-400">{item.note}</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-gray-400">{item.date}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
